@@ -1,0 +1,47 @@
+.admin-panel-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .dashboard-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .option-btn {
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .sales-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .update-btn {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .transaction-btn {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .return-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .option-btn:hover {
+    opacity: 0.8;
+  }
+  

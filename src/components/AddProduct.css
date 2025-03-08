@@ -1,0 +1,76 @@
+.add-product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+.product-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 400px;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  width: 40%;
+  text-align: left;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 55%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-generate-barcode {
+  background-color: #ffc107;
+}
+
+.btn-submit {
+  background-color: #28a745;
+}
+
+.barcode-card {
+  margin-top: 20px;
+}

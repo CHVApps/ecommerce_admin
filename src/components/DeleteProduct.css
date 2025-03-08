@@ -1,0 +1,56 @@
+/* Delete Product Page Styling */
+.delete-product-container {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .delete-product-container h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .product-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  .product-table th,
+  .product-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .product-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .product-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  input[type="checkbox"] {
+    margin: 0 10px;
+  }
+  
+  .btn-delete {
+    padding: 12px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .btn-delete:hover {
+    background-color: #e53935;
+  }
+  

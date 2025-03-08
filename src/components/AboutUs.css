@@ -1,0 +1,23 @@
+.about-container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .about-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .about-card {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-10px);
+  }
+  

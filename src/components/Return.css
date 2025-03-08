@@ -1,0 +1,49 @@
+.return-container {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.transaction-details {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.return-eligible {
+  color: green;
+  font-weight: bold;
+}
+
+.return-not-eligible {
+  color: red;
+  font-weight: bold;
+}

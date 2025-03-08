@@ -1,0 +1,83 @@
+/* General Navbar Styling */
+.navbar {
+    background-color: #000; /* Black background */
+    color: white;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif; /* Arial font for all content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .nav-item {
+    margin-left: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .nav-link:hover {
+    background-color: white; /* Hover background color */
+    color: black; /* Change text color to black */
+  }
+  
+  /* Admin button specific styling */
+  .admin-button {
+    background-color: #ff4500; /* Admin button color */
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: bold;
+  }
+  
+  .admin-button:hover {
+    background-color: white; /* Admin button hover effect */
+    color: black; /* Change text color to black on hover */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+    }
+  }
+  
