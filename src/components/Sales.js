@@ -15,7 +15,7 @@ const Sales = () => {
       socketRef.current.close();
     }
 
-    socketRef.current = new WebSocket("ws://192.168.1.2:5001");
+    socketRef.current = new WebSocket("wss://ecommerce-backend-zssq.onrender.com");
 
     socketRef.current.onopen = () => {
       setStatus("✅ Waiting for Barcode Scan...");
