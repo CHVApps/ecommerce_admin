@@ -20,7 +20,7 @@ const Return = () => {
       setTransaction(null);
       setReturnMessage("");
 
-      const response = await axios.get(`http://localhost:5001/api/return/${referenceNumber}`);
+      const response = await axios.get(`https://ecommerce-backend-zssq.onrender.com/api/return/${referenceNumber}`);
 
       if (response.data.status === "success") {
         setTransaction(response.data.transaction);

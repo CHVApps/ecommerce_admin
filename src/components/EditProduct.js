@@ -24,7 +24,7 @@ const EditProduct = () => {
   const handleSearch = async () => {
     try {
       console.log(`🔍 Searching product with unique code: ${uniqueCodeInput}`);
-      const response = await axios.get(`http://localhost:5001/api/products/unique/${uniqueCodeInput}`);
+      const response = await axios.get(`https://ecommerce-backend-zssq.onrender.com/api/products/unique/${uniqueCodeInput}`);
 
       if (response.status === 200 && response.data) {
         console.log("✅ Product found:", response.data);
@@ -65,7 +65,7 @@ const handleSubmit = async (e) => {
     console.log(`🔄 Sending update request for Product ID: ${product.id}`, product);
 
     const response = await axios.put(
-      `http://localhost:5001/api/products/${product.id}`,
+      `https://ecommerce-backend-zssq.onrender.com/api/products/${product.id}`,
       {
         category_name: product.category_name,
         product_name: product.product_name,

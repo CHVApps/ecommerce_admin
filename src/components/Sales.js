@@ -89,7 +89,7 @@ const Sales = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5001/api/store-bill", {
+      const response = await axios.post("https://ecommerce-backend-zssq.onrender.com/api/store-bill", {
         customerNumber,
         totalPrice,
         products,
