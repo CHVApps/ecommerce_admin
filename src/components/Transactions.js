@@ -8,7 +8,7 @@ const Transactions = () => {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const response = await axios.get("https://ecommerce-backend-zssq.onrender.com/api/transactions");
+        const response = await axios.get("https://ecommerce-backend-lv9n.onrender.com/api/transactions");
         setTransactions(response.data);
       } catch (error) {
         console.error("Error fetching transactions:", error);

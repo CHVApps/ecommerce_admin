@@ -14,8 +14,8 @@ const Sales = () => {
     if (socketRef.current) {
       socketRef.current.close();
     }
-
-    socketRef.current = new WebSocket("wss://ecommerce-backend-zssq.onrender.com");
+  
+    socketRef.current = new WebSocket("wss://ecommerce-backend-lv9n.onrender.com");
 
     socketRef.current.onopen = () => {
       setStatus("✅ Waiting for Barcode Scan...");
@@ -89,7 +89,7 @@ const Sales = () => {
     }
 
     try {
-      const response = await axios.post("https://ecommerce-backend-zssq.onrender.com/api/store-bill", {
+      const response = await axios.post("https://ecommerce-backend-lv9n.onrender.com/api/store-bill", {
         customerNumber,
         totalPrice,
         products,

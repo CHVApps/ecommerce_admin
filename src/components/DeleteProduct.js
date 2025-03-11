@@ -10,7 +10,7 @@ const DeleteProduct = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("https://ecommerce-backend-zssq.onrender.com/api/products");
+        const response = await axios.get("https://ecommerce-backend-lv9n.onrender.com/api/products");
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -41,7 +41,7 @@ const handleDelete = async () => {
       await Promise.all(
           selectedProducts.map(async (id) => {
               console.log(`🗑️ Deleting product ID: ${id}`);
-              const response = await axios.delete(`https://ecommerce-backend-zssq.onrender.com/api/products/${id}`);
+              const response = await axios.delete(`https://ecommerce-backend-lv9n.onrender.com/api/products/${id}`);
 
               if (response.status !== 200) {
                   throw new Error("Delete failed");
