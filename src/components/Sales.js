@@ -82,19 +82,42 @@ const Sales = () => {
   const totalPrice = products.reduce((sum, p) => sum + parseFloat(p.final_price), 0);
 
   // ✅ Confirm Bill
-  const handleConfirmBill = () => {
+  const handleConfirmBill = async () => {
     if (!customerNumber) {
       alert("Please enter a mobile number!");
       return;
     }
   
-    const message = `Hello! Your total bill is ₹${totalPrice.toFixed(2)}\n\nProducts:\n` +
-      products.map(p => `${p.product_name} x${p.quantity} - ₹${p.final_price} (Ref: ${p.unique_code})`).join('\n');
+    try {
+      // ✅ Store the bill in the backend
+      const response = await axios.post("https://ecommerce-backend-lv9n.onrender.com/api/store-bill", {
+        customerNumber,
+        totalPrice,
+        products,
+      });
   
-    const whatsappUrl = `https://wa.me/${customerNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+      const referenceNumber = response.data.transaction.reference_number;
+  
+      // ✅ Prepare the WhatsApp message after successful storage
+      const message = `Hello! Your total bill is ₹${totalPrice.toFixed(2)}\n\nProducts:\n` +
+        products.map(p => `${p.product_name} x${p.quantity} - ₹${p.final_price} (Ref: ${p.unique_code})`).join('\n') +
+        `\n\nReference Number: ${referenceNumber}`;
+  
+      // ✅ Open WhatsApp
+      const whatsappUrl = `https://wa.me/${customerNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+  
+      // ✅ Reset the state after successful transaction
+      alert(`✅ Bill Stored Successfully!\nReference Number: ${referenceNumber}`);
+      setShowPopup(false);
+      setProducts([]);
+      setCustomerNumber('');
+      
+    } catch (error) {
+      console.error("Error storing bill:", error);
+      alert("❌ Failed to store bill.");
+    }
   };
-  
   
 
   return (
