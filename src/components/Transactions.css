@@ -1,69 +1,68 @@
 .transactions-container {
-    max-width: 1000px;
-    margin: 40px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Add max height & scroll inside tbody */
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+}
+
+/* ✅ Fixed header while scrolling */
+.transactions-table thead {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* ✅ Scrollable tbody */
+.transactions-table tbody {
+  display: block;
+  max-height: 400px; /* Adjust height for better scrolling */
+  overflow-y: auto;
+}
+
+/* ✅ Make each row display properly */
+.transactions-table tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* ✅ Padding & border styles */
+.transactions-table th,
+.transactions-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ✅ Add hover effect */
+.transactions-table tr:hover {
+  background: #f1f1f1;
+}
+
+/* ✅ Responsive design */
+@media (max-width: 768px) {
+  .transactions-container {
+      width: 90%;
   }
-  
-  .transactions-container h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .transactions-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #f9f9f9;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
+
   .transactions-table th,
   .transactions-table td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .transactions-table th {
-    background: #007bff;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .transactions-table tr:hover {
-    background: #f1f1f1;
-  }
-  
-  .no-transactions {
-    text-align: center;
-    font-size: 16px;
-    color: #888;
-    padding: 20px;
-  }
-  
-  .ref-number {
-    font-weight: bold;
-    color: #ff4500;
-  }
-  
-  .total-amount {
-    font-weight: bold;
-    color: #28a745;
-  }
-  
-  @media (max-width: 768px) {
-    .transactions-container {
-      width: 90%;
-    }
-  
-    .transactions-table th,
-    .transactions-table td {
       padding: 8px;
       font-size: 14px;
-    }
   }
-  
+}
