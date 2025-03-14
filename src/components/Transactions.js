@@ -10,7 +10,7 @@ const Transactions = () => {
   useEffect(() => {
       const fetchTransactions = async () => {
           try {
-              const response = await axios.get("https://ecommerce-backend-lv9n.onrender.com/api/transactions");
+              const response = await axios.get("https://ecommerce-backend-theta-plum.vercel.app/api/transactions");
               setTransactions(response.data); // ✅ Store all transactions
           } catch (error) {
               console.error("Error fetching transactions:", error);

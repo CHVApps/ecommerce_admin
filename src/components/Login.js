@@ -15,7 +15,7 @@ const Login = () => {
     }
 
     try {
-      const response = await fetch("https://ecommerce-backend-lv9n.onrender.com/admin-login", {
+      const response = await fetch("https://ecommerce-backend-theta-plum.vercel.app/admin-login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

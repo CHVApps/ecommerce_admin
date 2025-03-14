@@ -9,7 +9,7 @@ const ProductList = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("https://ecommerce-backend-lv9n.onrender.com/api/products");
+        const response = await axios.get("https://ecommerce-backend-theta-plum.vercel.app/api/products");
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -21,7 +21,7 @@ const ProductList = () => {
   // Handle delete product
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://ecommerce-backend-lv9n.onrender.com/api/products/${id}`);
+      await axios.delete(`https://ecommerce-backend-theta-plum.vercel.app/api/products/${id}`);
       // Update the UI after deletion
       setProducts(products.filter(product => product.id !== id));
     } catch (error) {

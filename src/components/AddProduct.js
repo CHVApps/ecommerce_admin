@@ -48,7 +48,7 @@ const AddProduct = () => {
     const uniqueCode = Math.floor(10000000 + Math.random() * 90000000).toString();
 
     try {
-      const response = await axios.post("https://ecommerce-backend-lv9n.onrender.com/api/products/generate-barcode", {
+      const response = await axios.post("https://ecommerce-backend-theta-plum.vercel.app/api/products/generate-barcode", {
         unique_code: uniqueCode,
       });
 
@@ -70,7 +70,7 @@ const AddProduct = () => {
     }
 
     try {
-      await axios.post("https://ecommerce-backend-lv9n.onrender.com/api/products", {
+      await axios.post("https://ecommerce-backend-theta-plum.vercel.app/api/products", {
         category_name: product.category_name,
         product_name: product.product_name,
         original_price: parseFloat(product.original_price),
