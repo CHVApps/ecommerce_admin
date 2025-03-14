@@ -8,7 +8,7 @@ import AddProduct from "./components/AddProduct";
 import EditProduct from "./components/EditProduct";
 import DeleteProduct from "./components/DeleteProduct";
 import ViewProducts from "./components/ViewProducts";
-import Sales from "./components/Sales";
+
 import Products from "./components/Products";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";
@@ -27,7 +27,6 @@ const App = () => {
         <Route path="/edit-product" element={<EditProduct />} />
         <Route path="/delete-product" element={<DeleteProduct />} />
         <Route path="/view-products" element={<ViewProducts />} />
-        <Route path="/sales" element={<Sales />} />
         <Route path="/products" element={<Products />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />

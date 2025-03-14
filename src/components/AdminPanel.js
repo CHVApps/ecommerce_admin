@@ -9,7 +9,6 @@ const AdminPanel = () => {
     <div className="admin-panel-container">
       <h2>Admin Panel</h2>
       <div className="dashboard-options">
-        <button className="option-btn sales-btn" onClick={() => navigate("/sales")}>Sales (Billing)</button>
         <button className="option-btn update-btn" onClick={() => navigate("/admin-dashboard")}>Product Updation</button>
         <button className="option-btn transaction-btn" onClick={() => navigate("/transactions")}>Transactions</button>
         <button className="option-btn return-btn" onClick={() => navigate("/return")}>Return</button>
